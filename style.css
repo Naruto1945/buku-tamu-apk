@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+/* Header */
+.header {
+  background-color: #1877f2;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 50px;
+  flex-direction: row; /* Default layout */
+}
+
+/* Left Section */
+.info {
+  max-width: 500px;
+  color: #333;
+}
+
+.info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Login Form */
+.login-form,
+.signup-form {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #dddfe2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form input[type="submit"],
+.signup-form input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover,
+.signup-form input[type="submit"]:hover {
+  background-color: #166fe5;
+}
+
+.login-form p,
+.signup-form div {
+  text-align: center;
+  margin: 15px 0;
+  color: #1877f2;
+  cursor: pointer;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background-color: #42b72a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: #36a420;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0 1.2rem;
+  margin-top: 0.8rem;
+}
+
+footer .credit {
+  font-size: 0.9rem;
+}
+
+footer .credit a {
+  color: black;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align */
+    gap: 20px; /* Reduce gap */
+  }
+
+  .info {
+    max-width: 100%; /* Full width on small screens */
+    padding: 0 20px; /* Add some padding */
+  }
+
+  .login-form,
+  .signup-form {
+    width: 90%; /* Full width on small screens */
+  }
+
+  .header h1 {
+    font-size: 28px; /* Smaller header on mobile */
+  }
+
+  .info h2 {
+    font-size: 24px; /* Smaller heading on mobile */
+  }
+
+  .info p {
+    font-size: 18px; /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px; /* Even smaller header on very small screens */
+  }
+
+  .info h2 {
+    font-size: 20px; /* Even smaller heading on very small screens */
+  }
+
+  .info p {
+    font-size: 16px; /* Smaller text on very small screens */
+  }
+}

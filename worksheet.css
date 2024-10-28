@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+/* Header */
+.header {
+  background-color: #1877f2;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+form {
+  width: 420px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddfe2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  padding: 14px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #166fe5;
+}
+
+/* Result */
+.result {
+  width: 420px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f2f5;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling untuk tombol */
+.styled-btn {
+  padding: 14px 20px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.styled-btn:hover {
+  background-color: #166fe5;
+}
+
+/* Responsiveness */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%; /* 75% dari font-size default */
+  }
+  form,
+  .result {
+    width: 90%; /* Lebar responsif untuk layar kecil */
+  }
+  .header h1 {
+    font-size: 28px; /* Ukuran font header lebih kecil */
+  }
+  /* Konsistensi ukuran font */
+  form label {
+    font-size: 1.2em; /* Atur ukuran font label */
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form select {
+    font-size: 1.2em; /* Atur ukuran font input */
+  }
+}
+
+@media (max-width: 1024px) {
+  form,
+  .result {
+    width: 95%; /* Lebar responsif untuk layar tablet */
+  }
+  form label {
+    font-size: 1.1em; /* Ukuran font label sedikit lebih kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%; /* 62.5% dari font-size default */
+  }
+  .header h1 {
+    font-size: 24px; /* Ukuran font header lebih kecil */
+  }
+  form,
+  .result {
+    width: 100%; /* Lebar penuh untuk mobile */
+  }
+  /* Konsistensi ukuran font */
+  form label {
+    font-size: 1em; /* Ukuran font label */
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form select {
+    font-size: 1em; /* Ukuran font input */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  form input[type="submit"],
+  .styled-btn {
+    font-size: 16px; /* Ukuran font tombol lebih kecil */
+  }
+  form label {
+    font-size: 0.9em; /* Ukuran font label sedikit lebih kecil untuk mobile */
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form select {
+    font-size: 0.9em; /* Ukuran font input sedikit lebih kecil untuk mobile */
+  }
+}

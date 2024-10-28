@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worksheet</title>
+    <link rel="stylesheet" href="worksheet.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Formulir Buku Tamu</h1>
+    </div>
+
+    <div class="container">
+      <form id="data-form">
+        <label for="name">Nama :</label>
+        <input type="text" placeholder="Nama" id="name" />
+
+        <label for="address">Alamat :</label>
+        <select id="address" onchange="toggleCustomAddress()">
+          <option value="">Pilih Desa</option>
+          <option value="Karang Pucung">Karang Pucung</option>
+          <option value="Kebobung">Kebobung</option>
+          <option value="Pengindangan">Pengindangan</option>
+          <option value="Mulyoharjo">Mulyoharjo</option>
+          <option value="Lenggak">Lenggak</option>
+          <option value="Kedungsambi">Kedungsambi</option>
+          <option value="Guluk">Guluk</option>
+          <option value="Bantarjati">Bantarjati</option>
+          <option value="Giri Mulya">Giri Mulya</option>
+          <option value="Bodas">Bodas</option>
+          <option value="Gepura">Gepura</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+        <input
+          type="text"
+          id="custom-address"
+          placeholder="Masukkan nama desa"
+          style="display: none"
+        />
+
+        <label for="amount">Uang (Rp) :</label>
+        <input type="number" placeholder="Jumlah Uang" id="amount" />
+
+        <label for="rice">Beras (Kg) :</label>
+        <input type="number" placeholder="Jumlah Beras" id="rice" />
+
+        <label for="others">Sumbangan :</label>
+        <input type="text" placeholder="Keterangan" id="others" />
+
+        <input type="submit" value="Simpan Data" />
+      </form>
+
+      <div class="result">
+        <table>
+          <tr>
+            <th>Total Tamu</th>
+            <td id="total-guests">0</td>
+          </tr>
+          <tr>
+            <th>Total Uang</th>
+            <td id="total-amount">0</td>
+          </tr>
+          <tr>
+            <th>Total Beras</th>
+            <td id="total-rice">0</td>
+          </tr>
+          <tr>
+            <th>Total Sumbangan</th>
+            <td id="total-gifts">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="styled-btn" id="reset-btn">Reset Data</button>
+      <button class="styled-btn" id="export-btn">Unduh Data</button>
+      <button class="styled-btn" id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Tambahkan pustaka XLSX sebelum worksheet.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="worksheet.js"></script>
+  </body>
+</html>
